@@ -43,7 +43,7 @@ namespace eval ::selfrun {
 
     proc appdir {} {
         set @ {Return directory, where script placed.};
-        return [file dirname [file normalize $argv0]];
+        return [file dirname [file normalize $::argv0]];
     };
     proc script {} {
         set @ {Return full path to script.};
