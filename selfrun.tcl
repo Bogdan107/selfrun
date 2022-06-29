@@ -31,13 +31,13 @@ namespace eval ::selfrun {
 
     proc eval {command1 {command2 {}}} {
         if {[::selfrun::test] == 1} {
-            ::selfrun::LogDebug {START DIRECTLY};
+            ::selfrun::LogDebug {DIRECTLY RUN - START};
             uplevel 1 $command1;
-            ::selfrun::LogDebug {FINISH DIRECTLY};
+            ::selfrun::LogDebug {DIRECTLY RUN - FINISH};
         } elseif {$command2 ne {}} {
-            ::selfrun::LogDebug {INDIRECTLY START};
+            ::selfrun::LogDebug {INDIRECTLY RUN - START};
             uplevel 1 $command2;
-            ::selfrun::LogDebug {INDIRECTLY FINISH};
+            ::selfrun::LogDebug {INDIRECTLY RUN - FINISH};
         };
     };
 
