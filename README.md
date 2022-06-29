@@ -3,11 +3,11 @@ This is a library for [Tcl](https://tcl.tk/) language.
 
 Library allows to run a part of code, depending on how the script is runs: directly from interpreter, or indirectly - when script is loaded from another script.
 
-This is need to quickly test the currently edited file without needs to start it by main application.
-With this library, I cat edit the script and can test behaviour of changes directly from IDE.
+This is need to quickly test the currently edited file without needs to start it by the main application.
+With this library, I can edit the script and can test behaviour of changes directly from IDE.
 
 Many scripts are the part of big project.
-To use functionality of those scripts, main project application must be called.
+To use functionality of those scripts, main project script must be called.
 But if I need to make changes into some part of this script and quick test this new version of script without needs to load the main project, then I just use command `::selfrun::eval { <some code> };`.
 So, main application loads this script without calls the commands, which placed inside the braces of "::selfrun::eval" command.
 But if this script loads directly by interpreter - then code inside the braces will be executed and I can to see some result.
